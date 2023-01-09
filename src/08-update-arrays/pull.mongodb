@@ -1,0 +1,18 @@
+use("platzi_store")
+
+
+// Removiendo un elemento del array.
+/* db.inventory.updateMany({}, {
+    $pull: {
+        tags: "book"
+    }
+}) */
+
+// Removiendo varios elementos de un array.
+db.inventory.updateMany({}, {
+    $pull: {
+        tags: {
+            $in: ["appliance", "school"]
+        }
+    }
+})
