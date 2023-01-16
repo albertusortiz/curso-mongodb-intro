@@ -1,0 +1,10 @@
+use("platzi_store")
+
+// Using %eq (igual)
+// db.inventory.find({ qty: 20 }) // Operador implicito
+// db.inventory.find({ qty: {$eq: 20 } }) // Operador explicito
+// Busqueda por subdocumento
+// db.inventory.find({ "item.code": {$eq: "123" } })
+
+// Using $ne (diferente)
+db.inventory.find({ qty: {$ne: 20 } })
