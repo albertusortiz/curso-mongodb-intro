@@ -1,0 +1,10 @@
+use("platzi_store")
+
+// db.inventory.find({ "item.description": "Single line description." })
+// db.inventory.find({ "item.description": { $regex: /line/ } }) // //: Hacer match con los que tengan line
+// db.inventory.find({ "item.description": { $regex: /LINE/i } }) // i: Hacer match donde line aparezca en MAY o MIN
+// db.inventory.find({ "item.description": { $regex: /line$/i } }) // $: Hacer match donde line este al final
+// db.inventory.find({ "item.description": { $regex: /^single/i } }) // ^: Hacer match donde line este al inicio
+db.inventory.find({ "item.description": { $regex: /^s/im } }) // m: multiline, hace busquedas en saltos de linea
+
+
